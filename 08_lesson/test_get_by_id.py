@@ -1,7 +1,7 @@
 import requests
+from config import url
+from config import token
 
-url = "https://ru.yougile.com/api-v2/projects/384b585d-82bb-4180-a0d8-944a15066993"
-token = "token"
 def test_get_by_id():
     headers = {
     "Authorization": f"Bearer {token}",
@@ -12,4 +12,4 @@ def test_get_by_id():
         "deleted": 'false',
         "title": "testProjectPython"
     }
-    response = requests.put(url, headers=headers, json=data)
+    response = requests.put(url + '/384b585d-82bb-4180-a0d8-944a15066993', headers=headers, json=data)

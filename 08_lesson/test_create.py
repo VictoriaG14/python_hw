@@ -1,7 +1,7 @@
 import requests
+from config import url
+from config import token
 
-url = "https://ru.yougile.com/api-v2/projects"
-token = "token"
 def test_create():
     headers = {
     "Authorization": f"Bearer {token}",
