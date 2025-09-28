@@ -13,3 +13,6 @@ def test_create():
         }
 
     response = requests.post(url, headers=headers, json=data)
+    response_json = response.json()
+    assert "id" in response_json, "Response should contain 'id' field"
+    assert response_json["id"], "Response 'id' field should not be empty"

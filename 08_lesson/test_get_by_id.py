@@ -13,3 +13,4 @@ def test_get_by_id():
         "title": "testProjectPython"
     }
     response = requests.put(url + '/384b585d-82bb-4180-a0d8-944a15066993', headers=headers, json=data)
+    response_json = response.json()
